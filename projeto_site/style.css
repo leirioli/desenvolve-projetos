@@ -24,6 +24,8 @@ html {
 
 .header {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -178,66 +180,6 @@ body {
   width: 100%;
 }
 
-#slider {
-  width: 80%;
-  overflow: hidden;
-  display: block;
-  justify-content: center;
-  margin: auto;
-  margin-bottom: 3%;
-  border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.352) 0px 8px 24px;
-}
-
-#slider figure {
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: 15s slider infinite;
-}
-
-#slider figure img {
-  float: left;
-  width: 20%;
-  border-radius: 0.5rem;
-}
-
-@keyframes slider {
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 0;
-  }
-  25% {
-    left: -100%;
-  }
-  45% {
-    left: -100%;
-  }
-
-  50% {
-    left: -200%;
-  }
-
-  70% {
-    left: -200%;
-  }
-
-  75% {
-    left: -300%;
-  }
-
-  95% {
-    left: -300%;
-  }
-
-  100% {
-    left: -400%;
-  }
-}
-
 .design-início-lugar {
   display: flex;
   flex-direction: column;
@@ -249,12 +191,12 @@ body {
   background-color: #8350f2e5;
 }
 
-.design-início-lugar h2 {
+.design-início-lugar p {
   padding-top: 5%;
   padding-bottom: 5%;
-  font-family: "Nunito", Arial, Helvetica, sans-serif;
-  color: black;
-  text-align: right;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: left;
   text-transform: uppercase;
   font-size: 3em;
   font-weight: bolder;
@@ -272,12 +214,20 @@ a:hover {
 
 /* serviços */
 
+#atendimento {
+  border-top: 1px rgba(0, 0, 0, 0.662) solid;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
 .servicos {
   display: flex;
   justify-content: center;
+  background-color: CA6CE6;
 }
 
 .design-serviços {
+  padding-top: 60px;
   margin: 5%;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
@@ -288,13 +238,17 @@ a:hover {
   text-transform: uppercase;
 }
 
+.design-serviços h3 {
+  padding-bottom: 40px;
+}
+
 .cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 32px;
   align-items: center;
-  color: white;
+  color: black;
 }
 
 div.cards section.card {
@@ -303,7 +257,7 @@ div.cards section.card {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: #8350f2;
+  background: #C8A4FB;
   padding: 1rem 1.5rem;
   border-radius: 8px;
   max-height: 300px;
@@ -333,14 +287,17 @@ div.cards section.card span {
 
 /* Sobre */
 
+#fundo {
+  background-color: #034aa6;
+}
+
 #fundo-sobre {
-  padding-top: 0.5%;
-  padding-bottom: 2%;
-  background-color: #8350f2e5;
+  padding-top: 60px;
 }
 
 .sobre {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 .design-sobre {
@@ -376,16 +333,36 @@ div.cards section.card span {
 /* footer */
 
 #fundo-contato {
-  margin: 4%;
+  padding-top: 60px;
+  background-color: #034aa6;
 }
 
 footer {
-  background-color: #cc72f2;
+  background-color: #C8A4FB;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footerNav {
+  margin: 30px 0px;
+}
+
+.footerNav ul {
   display: flex;
   justify-content: center;
-  align-items: center;
-  line-height: normal;
+  list-style: none;
 }
+
+.footerNav ul li a {
+  color: #000000;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+/**/
 
 #botao-wpp {
   display: flex;
@@ -432,8 +409,8 @@ footer {
 #contato-texto {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   text-align: center;
-  color: white;
-  font-weight: 600;
+  color: black;
+  font-weight: 700;
   text-transform: uppercase;
 }
 

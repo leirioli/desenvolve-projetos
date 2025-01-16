@@ -192,7 +192,7 @@ body {
 }
 
 .design-início-lugar p {
-  padding-top: 5%;
+  padding-top: 1%;
   padding-bottom: 5%;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: white;
@@ -200,6 +200,17 @@ body {
   text-transform: uppercase;
   font-size: 3em;
   font-weight: bolder;
+}
+
+.textoInicio1{
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.textoInicio2 {
+  display: inline-block;
+  position: relative;
+  left: 50%;
 }
 
 a {
@@ -351,15 +362,43 @@ footer {
   display: flex;
   justify-content: center;
   list-style: none;
+  font-family: 'Poppins';
 }
 
 .footerNav ul li a {
+  text-transform: uppercase;
   color: #000000;
   margin: 20px;
   text-decoration: none;
   font-size: 1.3em;
   opacity: 0.7;
   transition: 0.5s;
+  position: relative;
+}
+
+.footerNav ul li a::after{
+  content: '';
+  width: 0px;
+  height: 5px;
+  background: #7a53b0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: .5s;
+}
+
+.footerNav ul li:hover a::after {
+  width: 50%;
+  transform: translateX(100%);
+}
+
+
+.footerBottom {
+  font-family: 'Poppins';
+  position: relative;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /**/

@@ -13,6 +13,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
     </style>
+    <script src="scriptlogincadastro.js"></script>
     <title>Serviços - Espaço Silmara Regina</title>
 </head>
 <body>
@@ -28,9 +29,44 @@
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="contato.html">Contato</a></li>
+            <li><a href="javascript:void(0);" onclick="openPopup()">Login</a></li>
           </ul>
         </nav>
     </header>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <div class="popup-tabs">
+          <button class="tab-btn active" onclick="showForm('login')">Login</button>
+          <button class="tab-btn" onclick="showForm('signup')">Cadastro</button>
+        </div>
+        <div id="login-form" class="form">
+          <h2>Login</h2>
+          <form action="javascript:void(0);" onsubmit="loginUser()">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required />
+            <label for="login-password">Senha:</label>
+            <input type="password" id="login-password" name="password" required />
+            <button type="submit">Entrar</button>
+          </form>
+          <p id="login-error-message" style="color: red; display: none;">Login ou senha incorretos. Tente novamente.</p>
+        </div>
+        <div id="signup-form" class="form" style="display:none;">
+          <h2>Cadastro</h2>
+          <form action="javascript:void(0);" onsubmit="registerUser()">
+            <label for="signup-name">Nome:</label>
+            <input type="text" id="signup-name" name="name" required />
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" required />
+            <label for="signup-password">Senha:</label>
+            <input type="password" id="signup-password" name="password" required />
+            <label for="signup-confirm-password">Confirmar Senha:</label>
+            <input type="password" id="signup-confirm-password" name="confirm-password" required />
+            <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <main>
         <div class="servicos">
             <div class="design-serviços">
@@ -135,7 +171,7 @@
                 </h2>
                 <div class="botao-contato">
                   <a
-                    href="https://api.whatsapp.com/send?phone=5531983041257&text=Gostaria%20de%20agendar%20um%20atendimento"
+                    href="javascript:void(0);" onclick="openPopup()"
                     id="botao-wpp"
                     >Marque um atendimento</a
                   >

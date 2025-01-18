@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+    </style>
+    <title>Espaço Silmara Regina</title>
+  </head>
+  <body>
+    <header class="header">
+      <div id="logo">
+        <img src="imgs/icon.jpg" alt="" width="110" />
+      </div>
+      <nav id="início" class="navigation">
+        <input type="checkbox" class="toggle-menu" />
+        <div class="hamburger"></div>
+        <ul class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li class="dropdown">
+            <div class="botao-dropdown">Serviços</div>
+            <div class="menu-dropdown">
+              <a href="#contabil">Contabilidade e finanças</a>
+              <a href="#saude-mental">Saúde mental</a>
+              <a href="#treinamentos">Treinamentos</a>
+            </div>
+          </li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="javascript:void(0);" onclick="openPopup()">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <body>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <div class="popup-tabs">
+            <button class="tab-btn active" onclick="showForm('login')">Login</button>
+            <button class="tab-btn" onclick="showForm('signup')">Cadastro</button>
+          </div>
+          <div id="login-form" class="form">
+            <h2>Login</h2>
+            <form action="javascript:void(0);" onsubmit="loginUser()">
+              <label for="login-email">Email:</label>
+              <input type="email" id="login-email" name="email" required />
+              <label for="login-password">Senha:</label>
+              <input type="password" id="login-password" name="password" required />
+              <button type="submit">Entrar</button>
+            </form>
+            <p id="login-error-message" style="color: red; display: none;">Login ou senha incorretos. Tente novamente.</p>
+          </div>
+          <div id="signup-form" class="form" style="display:none;">
+            <h2>Cadastro</h2>
+            <form action="javascript:void(0);" onsubmit="registerUser()">
+              <label for="signup-name">Nome:</label>
+              <input type="text" id="signup-name" name="name" required />
+              <label for="signup-email">Email:</label>
+              <input type="email" id="signup-email" name="email" required />
+              <label for="signup-password">Senha:</label>
+              <input type="password" id="signup-password" name="password" required />
+              <label for="signup-confirm-password">Confirmar Senha:</label>
+              <input type="password" id="signup-confirm-password" name="confirm-password" required />
+              <button type="submit">Cadastrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="inicio">
+        <section class="design-início-lugar">
+          <!-- Sobre o lugar -->
+          <div id="slider">
+            <figure>
+              <img src="imgs/contact-us.jpg" alt="" />
+              <img src="imgs/espaço-silmara-regina1.jpg" alt="" />
+              <img src="imgs/espaço-silmara-regina2.jpg" alt="" />
+              <img src="imgs/espaço.jpg" alt="" />
+              <img src="imgs/contact-us.jpg" alt="" />
+            </figure>
+          </div>
+        </section>
+      </div>
+      <div id="cor"></div>
+      <div id="servicos">
+        <div class="design-serviços">
+          <!-- Serviços -->
+          <h2 id="contabil">
+            No Espaço Silmara Regina, oferecemos serviços na área contábil e
+            financeira:
+          </h2>
+          <div class="cards">
+            <section class="card">
+              <h1>Consultoria e mentoria</h1>
+              <span
+                >Saiba por uma profissional com experiência como manter a
+                contabilidade em dia, com atendimento especializado para a sua
+                situação!</span
+              >
+            </section>
+            <section class="card">
+              <h1>Gestão financeira na área contábil</h1>
+              <span>Melhore a saúde financeira da sua empresa!</span>
+            </section>
+          </div>
+          <h2 id="saude-mental">Na área da saúde mental:</h2>
+          <div class="cards">
+            <section class="card">
+              <h1>Atendimento psicanalítico</h1>
+              <span
+                >Cuide de sua saúde mental. Ela reflete diretamente no seu
+                estado emocional e físico!</span
+              >
+            </section>
+            <section class="card">
+              <h1>Análise comportamental</h1>
+              <span
+                >Descubra seu perfil, alcance melhor produtividade e aprimore de
+                maneira eficiente sua comunicação com as pessoas ao seu
+                redor!</span
+              >
+            </section>
+            <section class="card column1">
+              <h1>Inteligência emocional</h1>
+              <span
+                >O autoconhecimento é essencial para que você saiba definir com
+                segurança tudo aquilo que está sentindo e repassando para quem
+                está ao seu lado.</span
+              >
+            </section>
+            <section class="card column2">
+              <h1>TCC (Terapia Cognitiva Comportamental)</h1>
+              <span
+                >Buscando entender a sua realidade no presente para poder
+                compreender o porquê de seus pensamentos, sentimentos e
+                atitudes!!</span
+              >
+            </section>
+          </div>
+          <h3>
+            Assista a playlist
+            <a
+              href="https://www.youtube.com/watch?v=LU4cIaoe9-U&list=PLJIiDTnwQ4aDlm2INgISluU2cJSV7-QXU>"
+              >"Série: Comportamentos"</a
+            >
+          </h3>
+          <h2 id="treinamentos">
+            Também oferecemos treinamentos para empresas e colaboradores:
+          </h2>
+          <div class="cards">
+            <section class="card">
+              <h1>Desenvolvimento humano e profissional</h1>
+              <span
+                >Aprenda a reconhecer e desenvolver suas competências e
+                habilidades para ser o diferencial no mercado de trabalho!</span
+              >
+            </section>
+            <section class="card">
+              <h1>Técnicas de vendas</h1>
+              <span
+                >Faça a diferença no seu empreendimento, aumente suas
+                vendas!</span
+              >
+            </section>
+            <section class="card lider">
+              <h1>Liderança de equipes</h1>
+              <span
+                >Aprenda a desenvolver sua habilidade de liderança e aumente a
+                eficiência dos processos na área profissional!</span
+              >
+            </section>
+          </div>
+          <h3>
+            Assista a playlist
+            <a
+              href="https://www.youtube.com/watch?v=UBRtuGMP5iE&list=PLJIiDTnwQ4aBwws2lLxgEaeyQ2OC6zKiY"
+              >"Momento empresas e colaboradores"</a
+            >
+          </h3>
+        </div>
+      </div>
+      <div id="fundo-sobre">
+        <section class="design-sobre" id="sobre">
+          <div class="sobre">
+            <h2 class="titulo-sobre">Sobre o Espaço Silmara Regina</h2>
+            <div class="container">
+              <img src="imgs/silmara-regina.jpg" alt="" width="300" />
+              <p>
+                Silmara Regina é uma profissional itabirana graduada em Ciências
+                Contábeis, com mais de 30 anos de experiência na área, e em
+                Gestão Financeira. Além disso, é psicanalista, especialista em
+                Inteligência Emocional e pós-graduada em TCC (Terapia
+                Cognitiva-Comportamental).
+                <br /><br />
+                No mercado há 3 anos, o Espaço Silmara Regina é uma empresa
+                localizada no centro de Itabira, e que desempenha atividades
+                diversas, mas que em todas as áreas possui um objetivo em comum:
+                fazer com que os clientes possam ter a melhor experiência com o
+                serviço. A Organização conta com uma profissional qualificada e
+                com experiência, possibilitando maior eficiência na realização
+                das demandas.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+  </div>
+    </body>
+    <main>
+    </main>
+    <footer id="contato">
+      <div id="fundo-contato">
+        <section>
+          <h2 id="contato-texto">
+            O Espaço Silmara Regina é a melhor escolha para quem procura um
+            atendimento acessível e de qualidade! Consulte a nossa gama de
+            atividades e marque já um atendimento!
+          </h2>
+          <div class="botao-contato">
+            <a
+              href="https://api.whatsapp.com/send?phone=5531983041257&text=Gostaria%20de%20agendar%20um%20atendimento"
+              id="botao-wpp">Marque um atendimento</a>
+          </div>
+        </section>
+        <div id="contato-texto2">
+          <div class="boxs margem">
+            <h2>Informações</h2>
+            <ul class="info">
+              <li>
+                <strong>Endereço: </strong>Edifício Água Santa - R. Água Santa,
+                414 - Sala 301 - Centro, Itabira - MG, 35900-009
+              </li>
+              <li><strong>Telefone: </strong>(31) 9 8304-1257</li>
+              <li><strong>Email: </strong>espacosilmararegina301@gmail.com</li>
+            </ul>
+          </div>
+          <div class="boxs">
+            <h2>Redes Sociais</h2>
+            <ul class="footer-link">
+              <li>
+                <a
+                  href="https://www.instagram.com/silmararegina1721/"
+                  class="botao"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-instagram"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                    /></svg></a>
+              </li>
+              <li class="tiktok">
+                <a
+                  href="https://www.tiktok.com/@treinamentosbb?_t=8myXDZ5ZXew&_r=1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-tiktok"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"
+                    />
+                  </svg>
+                  Treinamentos</a>
+              </li>
+              <li class="tiktok">
+                <a
+                  href="https://www.tiktok.com/@psicanalistasilmara?_t=8myXEBychoD&_r=1"
+                  a><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-tiktok"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                  </svg>
+                  Psicanálise</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function openPopup() {
+        document.getElementById("popup").style.display = "flex";
+        document.getElementById("login-error-message").style.display = "none";
+      }
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        clearFormFields();
+      }
+      function showForm(form) {
+        if (form === 'login') {
+          document.getElementById('login-form').style.display = 'block';
+          document.getElementById('signup-form').style.display = 'none';
+          document.querySelector('.tab-btn.active').classList.remove('active');
+          document.querySelector('.tab-btn:nth-child(1)').classList.add('active');
+        } else {
+          document.getElementById('signup-form').style.display = 'block';
+          document.getElementById('login-form').style.display = 'none';
+          document.querySelector('.tab-btn.active').classList.remove('active');
+          document.querySelector('.tab-btn:nth-child(2)').classList.add('active');
+        }
+      }
+      function registerUser() {
+        const name = document.getElementById('signup-name').value;
+        const email = document.getElementById('signup-email').value.toLowerCase();
+        const password = document.getElementById('signup-password').value;
+        const confirmPassword = document.getElementById('signup-confirm-password').value;
+        if (password !== confirmPassword) {
+          alert('As senhas não coincidem!');
+          return;
+        }
+        localStorage.setItem('user', JSON.stringify({ name, email, password }));
+        alert('Cadastro realizado com sucesso!');
+        clearFormFields();
+        closePopup();
+      }
+      function loginUser() {
+        const email = document.getElementById('login-email').value.toLowerCase();
+        const password = document.getElementById('login-password').value;
+
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        if (user && user.email === email && user.password === password) {
+          alert('Login efetuado com sucesso!');
+          clearFormFields();
+          closePopup();
+        } else {
+          const errorMessage = document.getElementById('login-error-message');
+          errorMessage.style.display = 'block';
+        }
+      }
+      function clearFormFields() {
+        document.getElementById('login-email').value = '';
+        document.getElementById('login-password').value = '';
+        document.getElementById('signup-name').value = '';
+        document.getElementById('signup-email').value = '';
+        document.getElementById('signup-password').value = '';
+        document.getElementById('signup-confirm-password').value = '';
+      }
+    </script>
+  </body>
+</html>

@@ -28,16 +28,96 @@
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="contato.html">Contato</a></li>
+          <li><a href="javascript:void(0);" onclick="openPopup()">Login</a></li>
         </ul>
       </nav>
     </header>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <div class="popup-tabs">
+          <button class="tab-btn active" onclick="showForm('login')">Login</button>
+          <button class="tab-btn" onclick="showForm('signup')">Cadastro</button>
+        </div>
+        <div id="login-form" class="form">
+          <h2>Login</h2>
+          <form action="javascript:void(0);" onsubmit="loginUser()">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required />
+            <label for="login-password">Senha:</label>
+            <input type="password" id="login-password" name="password" required />
+            <button type="submit">Entrar</button>
+          </form>
+          <p id="login-error-message" style="color: red; display: none;">Login ou senha incorretos. Tente novamente.</p>
+        </div>
+        <div id="signup-form" class="form" style="display:none;">
+          <h2>Cadastro</h2>
+          <form action="javascript:void(0);" onsubmit="registerUser()">
+            <label for="signup-name">Nome:</label>
+            <input type="text" id="signup-name" name="name" required />
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" required />
+            <label for="signup-password">Senha:</label>
+            <input type="password" id="signup-password" name="password" required />
+            <label for="signup-confirm-password">Confirmar Senha:</label>
+            <input type="password" id="signup-confirm-password" name="confirm-password" required />
+            <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <main>
       <div id="inicio">
+
         <section class="design-início-lugar">
           <p class="textoInicio1">
             Venha evoluir com a gente! 
           </p>
         </section>
+
+        <div class="slider">
+          <div class="slides">
+            <!--Radio Buttons-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <!--Fim Radio Buttons-->
+
+            <!--Slide Images-->
+            <div class="slide first">
+              <img src="imgs/1.png" alt="">
+            </div>
+            <div class="slide">
+              <img src="imgs/2.png" alt="">
+            </div>
+            <div class="slide">
+              <img src="imgs/3.png" alt="">
+            </div>
+            <!--Fim Slide Images-->
+
+            <!--Navegação Automática-->
+            <div class="navegacao-auto">
+              <div class="autobtn1"></div>
+              <div class="autobtn2"></div>
+              <div class="autobtn3"></div>
+            </div>
+            <!--fim navegação automática-->
+          </div>
+
+          <div class="navegacao-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+        </div>
+
+        <section class="design-início-lugar">
+          <p class="textoInicio2">
+            Aqui, você é o que importa!
+          </p>
+        </section>
+
+        <script src="scriptinício.js"></script>
       </div>
       <div id="cor"></div>
     </main>
@@ -54,5 +134,65 @@
         <p>Copyright &copy;2025; Todos os direitos reservados.</p>
       </div>
     </footer>
+    <script>
+      function openPopup() {
+        document.getElementById("popup").style.display = "flex";
+        document.getElementById("login-error-message").style.display = "none";
+      }
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        clearFormFields();
+      }
+      function showForm(form) {
+        if (form === 'login') {
+          document.getElementById('login-form').style.display = 'block';
+          document.getElementById('signup-form').style.display = 'none';
+          document.querySelector('.tab-btn.active').classList.remove('active');
+          document.querySelector('.tab-btn:nth-child(1)').classList.add('active');
+        } else {
+          document.getElementById('signup-form').style.display = 'block';
+          document.getElementById('login-form').style.display = 'none';
+          document.querySelector('.tab-btn.active').classList.remove('active');
+          document.querySelector('.tab-btn:nth-child(2)').classList.add('active');
+        }
+      }
+      function registerUser() {
+        const name = document.getElementById('signup-name').value;
+        const email = document.getElementById('signup-email').value.toLowerCase();
+        const password = document.getElementById('signup-password').value;
+        const confirmPassword = document.getElementById('signup-confirm-password').value;
+        if (password !== confirmPassword) {
+          alert('As senhas não coincidem!');
+          return;
+        }
+        localStorage.setItem('user', JSON.stringify({ name, email, password }));
+        alert('Cadastro realizado com sucesso!');
+        clearFormFields();
+        closePopup();
+      }
+      function loginUser() {
+        const email = document.getElementById('login-email').value.toLowerCase();
+        const password = document.getElementById('login-password').value;
+
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        if (user && user.email === email && user.password === password) {
+          alert('Login efetuado com sucesso!');
+          clearFormFields();
+          closePopup();
+        } else {
+          const errorMessage = document.getElementById('login-error-message');
+          errorMessage.style.display = 'block';
+        }
+      }
+      function clearFormFields() {
+        document.getElementById('login-email').value = '';
+        document.getElementById('login-password').value = '';
+        document.getElementById('signup-name').value = '';
+        document.getElementById('signup-email').value = '';
+        document.getElementById('signup-password').value = '';
+        document.getElementById('signup-confirm-password').value = '';
+      }
+    </script>
   </body>
 </html>

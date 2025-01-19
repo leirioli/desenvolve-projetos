@@ -118,6 +118,9 @@ html {
   right: 0;
   box-shadow: -20px 0 40px rgba(255, 255, 255, 0.354);
 }
+
+/* menu dropdown */
+
 /* body */
 
 body {
@@ -263,6 +266,125 @@ a:hover {
   color: #034aa693;
 }
 
+.middle {
+  background: #CB9DF0;
+}
+
+.phrase {
+  padding-top: 50px;
+  padding-left: 50px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.container-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  align-content: center;
+  padding-bottom: 50px;
+}
+
+.cardimg {
+  width: 100%;
+  height: auto;
+}
+
+.carditem {
+  width: 325px;
+  background-color: #FBFBFB;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  align-content: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+}
+
+#specific-card {
+  padding-top: 60px;
+}
+
+#specific-img {
+  position: relative;
+  bottom: 18px;
+}
+
+#specific-card2 {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 300px;
+}
+
+#specific-title {
+  position: relative;
+  top: 15px;
+  left: 5%;
+}
+
+#specific-title2 {
+  position: relative;
+  left: 10%;
+}
+
+#specific-title3 {
+  position: relative;
+  left: 15%;
+}
+
+#specific-title4 {
+  position: relative;
+  left: 1%;
+}
+
+.badge {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  padding: 16px;
+  font-size: 1.19rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.read-more-button {
+  padding-bottom: 50px;
+}
+
+#read-more-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 600;
+  line-height: normal;
+  min-height: 60px;
+  max-width: 200px;
+  min-width: 0;
+  background-color: #789DBC;
+  border: 0.5px solid black;
+  padding: 16px 24px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#read-more-link:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+
 /* serviços */
 
 #atendimento {
@@ -274,7 +396,7 @@ a:hover {
 .servicos {
   display: flex;
   justify-content: center;
-  background-color: CA6CE6;
+  background-color: #F0C1E1;
 }
 
 .design-serviços {
@@ -388,58 +510,6 @@ div.cards section.card span {
   background-color: #034aa6;
 }
 
-footer {
-  background-color: #C8A4FB;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.footerNav {
-  margin: 30px 0px;
-}
-
-.footerNav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  font-family: 'Poppins';
-}
-
-.footerNav ul li a {
-  text-transform: uppercase;
-  color: #000000;
-  margin: 20px;
-  text-decoration: none;
-  font-size: 1.3em;
-  opacity: 0.7;
-  transition: 0.5s;
-  position: relative;
-}
-
-.footerNav ul li a::after{
-  content: '';
-  width: 0px;
-  height: 5px;
-  background: #7a53b0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  transition: .5s;
-}
-
-.footerNav ul li:hover a::after {
-  width: 50%;
-  transform: translateX(100%);
-}
-
-
-.footerBottom {
-  font-family: 'Poppins';
-  position: relative;
-  display:  flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /**/
 

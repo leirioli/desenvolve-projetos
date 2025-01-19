@@ -716,6 +716,7 @@ div.cards section.card span {
   }
 
   /* Media Query - Página de Serviços */
+  
   div.cards {
     flex-direction: column;
   }
@@ -758,6 +759,11 @@ div.cards section.card span {
 }
 
 @media screen and (max-width: 700px) {
+
+  main {
+    padding-top: 30px
+  }
+  
   #inicio {
     padding-top: 30%;
   }

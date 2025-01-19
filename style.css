@@ -703,6 +703,11 @@ div.cards section.card span {
   }
 
   /* body - media query */
+
+  main {
+    padding-top: 30px
+  }
+  
   #inicio {
     padding-top: 20%;
   }

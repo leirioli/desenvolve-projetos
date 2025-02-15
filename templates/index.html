@@ -17,10 +17,6 @@
     <title>Espaço Silmara Regina</title>
   </head>
   <body>
-    <style>
-    </style>
-  </head>
-  <body>
     <header class="header">
       <div id="logo">
         <img src="static/img/icon.jpg" alt="" width="110" />
@@ -48,7 +44,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="fundo-início">
       <div id="inicio">
         <section class="design-início-lugar">
           <p class="textoInicio1">
@@ -80,6 +76,24 @@
             <label for="radio2" class="manual-btn"></label>
             <label for="radio3" class="manual-btn"></label>
           </div>
+
+          <script>
+            let count = 1;
+            document.getElementById("radio1").checked = true;
+      
+            setInterval(function () {
+              nextImage();
+            }, 4000);
+      
+            function nextImage() {
+              count++;
+              if (count > 3) {
+                count = 1;
+              }
+              document.getElementById("radio" + count).checked = true;
+            }
+          </script>
+
         </div>
         <section class="design-início-lugar">
           <p class="textoInicio2">
@@ -87,7 +101,7 @@
           </p>
         </section>
       </div>
-      <div class="middle">
+      <section class="middle">
         <p class="phrase">No Espaço Silmara Regina, você encontra os seguintes serviços:</p>
           <div class="container-card">
             <div class="carditem">
@@ -110,25 +124,7 @@
         <div class="read-more-button">
           <a href="{{ url_for('servicos') }}" id="read-more-link">Saiba mais</a>
         </div>
-      </div>
-      <div id="cor"></div>
+      </section>
     </main>
-    
-    <script>
-      let count = 1;
-      document.getElementById("radio1").checked = true;
-
-      setInterval(function () {
-        nextImage();
-      }, 4000);
-
-      function nextImage() {
-        count++;
-        if (count > 3) {
-          count = 1;
-        }
-        document.getElementById("radio" + count).checked = true;
-      }
-    </script>
   </body>
 </html>
